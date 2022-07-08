@@ -6,7 +6,7 @@ const {
 const AlertsData = [];
 
 function isAlertSevere(precipitationData) {
-    return precipitationData['Amount'] > 10;
+    return precipitationData['amount'] > 10;
 }
 const fs = require('fs');
 
@@ -27,8 +27,8 @@ function loadPrecipitationData() {
                 reject(err);
             })
             .on('end', () => {
-                const RainDataFound = AlertsData.length;
-                console.log(`${RainDataFound } severe data found!`);
+                // const RainDataFound = AlertsData.length;
+                // console.log(`${RainDataFound } severe data found!`);
                 resolve();
             });
     });
